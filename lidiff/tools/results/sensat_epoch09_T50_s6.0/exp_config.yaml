@@ -1,0 +1,73 @@
+!!python/object/new:pytorch_lightning.utilities.parsing.AttributeDict
+dictitems:
+  data:
+    data_dir: ./Datasets/Sensat_0.200_num_points_500000
+    dataloader: Sensat
+    dataset_norm: false
+    max_range: 50.0
+    num_points: 180000
+    resolution: 0.2
+    split: train
+    std_axis_norm: false
+    test:
+    - birmingham_block_2
+    - birmingham_block_8
+    - cambridge_block_15
+    - cambridge_block_22
+    - cambridge_block_16
+    - cambridge_block_27
+    train:
+    - birmingham_block_0
+    - birmingham_block_12
+    - birmingham_block_10
+    - birmingham_block_13
+    - birmingham_block_11
+    - birmingham_block_4
+    - birmingham_block_3
+    - birmingham_block_9
+    - birmingham_block_6
+    - birmingham_block_7
+    - cambridge_block_12
+    - cambridge_block_17
+    - cambridge_block_18
+    - cambridge_block_19
+    - cambridge_block_14
+    - cambridge_block_2
+    - cambridge_block_23
+    - cambridge_block_20
+    - cambridge_block_21
+    - cambridge_block_25
+    - cambridge_block_26
+    - cambridge_block_28
+    - cambridge_block_3
+    - cambridge_block_32
+    - cambridge_block_34
+    - cambridge_block_33
+    - cambridge_block_6
+    - cambridge_block_4
+    - cambridge_block_9
+    validation:
+    - birmingham_block_1
+    - birmingham_block_5
+    - cambridge_block_10
+    - cambridge_block_7
+  diff:
+    beta_end: 0.007
+    beta_func: linear
+    beta_start: 3.5e-05
+    reg_weight: 5.0
+    s_steps: 50
+    t_steps: 1000
+  experiment:
+    id: sensat
+  model:
+    out_dim: 96
+  train:
+    batch_size: 2
+    decay_lr: 0.0001
+    lr: 0.0001
+    max_epoch: 20
+    n_gpus: 2
+    num_workers: 4
+    uncond_prob: 0.1
+    uncond_w: 6.0

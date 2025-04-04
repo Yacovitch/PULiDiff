@@ -1,0 +1,20 @@
+name: pytorch3d
+channels:
+  - pytorch
+  - conda-forge
+  - fvcore
+  - iopath
+  - bottler
+dependencies:
+  - python=3.7
+  - pytorch=1.9.0
+  - torchvision
+  - cudatoolkit=10.2
+  - fvcore
+  - iopath
+  - nvidiacub
+  - hdbscan
+  - pip
+  - pip:
+    - setuptools==58.2.0
+    - joblib==1.1.0

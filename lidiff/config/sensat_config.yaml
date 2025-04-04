@@ -1,0 +1,39 @@
+experiment:
+    id: sensat_random_radius_50_full
+
+##Data
+data:
+    data_dir: './Datasets/Sensat_random_radius_50'
+    resolution: 0.05
+    dataloader: 'Sensat'
+    split: 'train'
+    train: [ 'birmingham_block_0', 'birmingham_block_12', 'birmingham_block_10',  'cambridge_block_12', 'cambridge_block_17', 'cambridge_block_18', 'cambridge_block_19', 'cambridge_block_14', 'cambridge_block_2', 'cambridge_block_23', 'cambridge_block_20', 'cambridge_block_21', 'cambridge_block_25', 'cambridge_block_26', 'cambridge_block_28', 'cambridge_block_3', 'cambridge_block_32', 'cambridge_block_34', 'cambridge_block_33', 'cambridge_block_6', 'cambridge_block_4', 'cambridge_block_9']
+    validation: [ 'birmingham_block_1', 'birmingham_block_5', 'cambridge_block_10', 'cambridge_block_7', 'birmingham_block_11', 'birmingham_block_4', 'birmingham_block_3', 'birmingham_block_9','birmingham_block_13', 'birmingham_block_6', 'birmingham_block_7' ]
+    test: ['birmingham_block_2'] #'birmingham_block_8', 'cambridge_block_15', 'cambridge_block_22', 'cambridge_block_16', 'cambridge_block_27'
+    num_points: 140000
+    max_range: 50.
+    dataset_norm: False
+    std_axis_norm: False
+
+##Training
+train:
+    uncond_prob: 0.1
+    uncond_w: 6.
+    n_gpus: 2
+    num_workers: 4
+    max_epoch: 20
+    lr: 0.0001
+    batch_size: 2
+    decay_lr: 1.0e-4
+
+diff:
+    beta_start: 3.5e-5
+    beta_end: 0.007
+    beta_func: 'linear'
+    t_steps: 1000
+    s_steps: 50
+    reg_weight: 5.0
+
+##Network
+model:
+    out_dim: 96
